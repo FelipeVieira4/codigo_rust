@@ -1,4 +1,3 @@
-use std::io;
 
 struct PlayerS{
     x: u16,
@@ -20,23 +19,8 @@ impl PlayerS{
 
 fn main() {
     
-    let mut input = String::new();
-
-    let test: i8;
     let player = PlayerS::new(30,60);
     
-    io::stdin().read_line(&mut input).expect("Failed to read line");
-
-    test = input.trim().parse().expect("Please enter a valid number");
 
     println!("x:{}, y:{}, life:{}, idDead:{}",player.x,player.y,player.life,player.is_dead);
-    
-    println!("Hello, world!");
-    print!("{} :",test);
-    
-    println!("{}", match test < 100 {
-    true => "is Less than 100",
-    false => "is Bigger than or equal to 100"
-    });
-
 }
